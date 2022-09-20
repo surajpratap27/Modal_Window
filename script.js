@@ -20,3 +20,10 @@ document.querySelector('.close-modal').addEventListener('click', add_modal)
 
 document.querySelector('.overlay').addEventListener('click', add_modal)
 
+document.addEventListener('keydown',(e)=>{
+    if(e.key=='Escape' && !document.querySelector('.modal').classList.contains('hidden'))
+    {
+        add_modal();
+    }
+})
+
